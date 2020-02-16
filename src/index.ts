@@ -1,6 +1,5 @@
-console.log("hello I am  node app from typescript");
-console.log("hello I am  node app from typescript");
+import hello from "./hello";
+hello;
 
-class name {
-  constructor(parameters) { }
-}
+console.log("hello I am  node app from typescript");
+console.log("hello I am  node app from typescript");

@@ -6,7 +6,6 @@
     "sourceMap": true,
     "module": "CommonJS",
     "noEmitOnError": true,
-    "declaration": true,
     "strictNullChecks": true,
     "noUnusedParameters": true
   },
