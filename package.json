@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "npm run lint && tsc -p .",
     "prod": "tsc && node ./dist/index.js",
     "start": "ts-node src/index.ts",
-    "lint":"eslint src/**",
+    "lint": "eslint src/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
