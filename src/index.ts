@@ -1,20 +1,24 @@
-import hello from "./hello";
-hello;
+import "reflect-metadata";
+import { GraphQLServer } from "graphql-yoga";
+import { createConnection } from "typeorm";
+// ... or using `require()`
+// const { GraphQLServer } = require('graphql-yoga')
 
-console.log("hello I am  node app from typescript");
-console.log("hello I am  node app from typescript");
-
-class Name {
-  private name: string;
-  constructor(name: string) {
-    this.name = name;
-    console.log("my name is ==> ", this.name);
+const typeDefs = `
+  type Query {
+    hello(name: String): String!
   }
-  public setName(name: string): void {
-    this.name = name;
-    console.log("my name is ==> ", this.name);
-  }
-}
+`;
 
-const myName = new Name(`eslam`);
-myName.setName("farida");
+const resolvers = {
+  Query: {
+    hello: (_, { name }): string => `Hello ${name || "World"}`
+  }
+};
+
+const server = new GraphQLServer({ typeDefs, resolvers });
+createConnection()
+  .then(() => {
+    server.start(() => console.log("Server is running on localhost:4000"));
+  })
+  .catch(error => console.log(error));
