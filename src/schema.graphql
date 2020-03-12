@@ -1,0 +1,17 @@
+# Data types
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  password : String!
+}
+
+# id: ID! @id
+#   name: String!
+#   email: String! @unique
+#   password: String!
+#   links: [Link!]!
+# Query types
+type Query {
+  hello(name: String): String!
+}

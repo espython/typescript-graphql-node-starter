@@ -9,6 +9,7 @@
     "strictNullChecks": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
+    "esModuleInterop":true, 
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },

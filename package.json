@@ -9,14 +9,17 @@
       "prod": "tsc && node ./dist/index.js",
       "start": "nodemon --exec ts-node src/index.ts",
       "lint": "eslint src/**/*",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
    },
    "keywords": [],
    "author": "",
    "license": "ISC",
    "dependencies": {
+      "@types/cookie-parser": "^1.4.2",
       "@types/express": "^4.17.2",
       "@types/node": "^13.7.1",
+      "cookie-parser": "^1.4.4",
       "express": "^4.17.1",
       "graphql-yoga": "^1.18.3",
       "pg": "^7.18.2",
@@ -25,6 +28,7 @@
       "typeorm": "0.2.24"
    },
    "devDependencies": {
+      "@types/node": "^8.0.29",
       "@typescript-eslint/eslint-plugin": "^2.19.2",
       "@typescript-eslint/parser": "^2.19.2",
       "eslint": "^6.8.0",
@@ -32,8 +36,8 @@
       "eslint-plugin-prettier": "^3.1.2",
       "nodemon": "^2.0.2",
       "prettier": "^1.19.1",
-      "typescript": "3.8.3",
       "ts-node": "3.3.0",
-      "@types/node": "^8.0.29"
+      "tsconfig-paths": "^3.9.0",
+      "typescript": "3.8.3"
    }
 }
