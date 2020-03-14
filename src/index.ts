@@ -3,7 +3,9 @@ import { GraphQLServer } from "graphql-yoga";
 import { createConnection } from "typeorm";
 import cookieParser from "cookie-parser";
 
-import { hello } from "./resolvers/Queries";
+// import utils from "./utils/utils";
+import Queries from "./resolvers/Queries";
+import Mutations from "./resolvers/Mutations";
 
 // ... or using `require()`
 // const { GraphQLServer } = require('graphql-yoga')
@@ -11,9 +13,8 @@ import { hello } from "./resolvers/Queries";
 const typeDefs = `./src/schema.graphql`;
 
 const resolvers = {
-  Query: {
-    hello
-  }
+  Query: Queries,
+  Mutation: Mutations
 };
 
 const connectDb = async (retries = 5) => {

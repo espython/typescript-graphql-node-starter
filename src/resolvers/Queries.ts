@@ -1,8 +1,15 @@
+import { QueryMap } from "../types/graphql-util";
+
 /**
  * graphql queries definitions
  */
-const hello = (_, { name }): string => {
-  return `Hello ${name || "World"}`;
+const Queries: QueryMap = {
+  hello: (_, { name }): string => {
+    return `Hello ${name || "World"}`;
+  },
+  welcome: (_, { name }): string => {
+    return `Welcome ${name || "World"}`;
+  }
 };
 
-export { hello };
+export default Queries;
